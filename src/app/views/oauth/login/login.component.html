@@ -1,1 +1,44 @@
-<p>login works!</p>
+<form fxLayout="column" [formGroup]="formGroupLogin">
+  <h2>Login</h2>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Correo</mat-label>
+    <input
+      type="text"
+      name="email"
+      matInput
+      placeholder="Ingrese su correo"
+      #fieldEmail
+      required
+      formControlName="email"
+    />
+    <mat-icon matSuffix>email</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Contraseña</mat-label>
+    <input
+      type="{{ hide ? 'password' : 'text' }}"
+      name="password"
+      matInput
+      #fieldPassword
+      required
+      formControlName="password"
+    />
+    <button mat-icon-button matSuffix type="button" (click)="hide = !hide">
+      <mat-icon>{{ hide ? "lock" : "lock_open" }}</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <div fxLayout fxLayoutAlign="center">
+    <button
+      type="button"
+      color="primary"
+      mat-flat-button
+      (click)="handler()"
+      [disabled]="formGroupLogin.invalid"
+    >
+      Ingresar
+    </button>
+  </div>
+</form>
