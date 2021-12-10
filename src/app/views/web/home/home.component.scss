@@ -1,0 +1,12 @@
+.content {
+  padding: 16px;
+
+  & > mat-card {
+    margin-bottom: 16px;
+  }
+
+  .image {
+    height: 350px;
+    object-fit: cover;
+  }
+}

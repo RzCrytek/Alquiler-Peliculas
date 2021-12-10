@@ -1,1 +1,55 @@
-<p>detail works!</p>
+<mat-toolbar>
+  <a routerLink="/" mat-button color="accent">
+    <mat-icon>chevron_left</mat-icon>
+    REGRESAR
+  </a>
+</mat-toolbar>
+
+<div class="wrapper">
+  <div class="container">
+    <div
+      fxLayout
+      fxLayout.lt-sm="column"
+      fxLayoutAlign="space-between"
+      fxLayoutGap="50px"
+    >
+      <div
+        class="section-image"
+        fxLayout="column"
+        fxLayoutAlign="center"
+        fxFlex="1 1 50%"
+      >
+        <picture>
+          <img class="image" mat-card-image src="/assets/img/pelicula.jpg" />
+        </picture>
+      </div>
+
+      <div
+        class="section-information"
+        fxFlex="1 1 50%"
+        fxFlex.lt-sm="1 1 100%"
+        fxLayout="column"
+        fxLayoutAlign=""
+      >
+        <div class="content">
+          <h1>Señor de los anillos</h1>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.
+          </p>
+
+          <button class="rent" mat-stroked-button color="primary">
+            ALQUILAR
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

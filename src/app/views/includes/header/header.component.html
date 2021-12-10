@@ -1,1 +1,17 @@
-<p>header works!</p>
+<header>
+  <mat-toolbar color="primary">
+    <span>AP</span>
+    <span class="example-spacer"></span>
+
+    <nav>
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        mat-button
+        >Home</a
+      >
+      <a routerLink="/cart" routerLinkActive="active" mat-button>carrito</a>
+    </nav>
+  </mat-toolbar>
+</header>
