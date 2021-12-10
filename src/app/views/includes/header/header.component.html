@@ -1,17 +1,27 @@
 <header>
   <mat-toolbar color="primary">
-    <span>AP</span>
-    <span class="example-spacer"></span>
+    <div
+      fxLayout
+      fxLayout.lt-sm="column"
+      fxLayoutAlign="space-between"
+      class="container"
+    >
+      <span class="logo">AP</span>
 
-    <nav>
-      <a
-        routerLink="/"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        mat-button
-        >Home</a
-      >
-      <a routerLink="/cart" routerLinkActive="active" mat-button>carrito</a>
-    </nav>
+      <nav class="menu">
+        <a
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          mat-button
+          >Home</a
+        >
+        <a routerLink="/cart" routerLinkActive="active" mat-button>carrito</a>
+      </nav>
+
+      <nav class="options">
+        <a routerLink="/oauth/login" mat-raised-button>Login</a>
+      </nav>
+    </div>
   </mat-toolbar>
 </header>
